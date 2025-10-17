@@ -1,8 +1,19 @@
+name: minimal
+
 on:
     push
 jobs:
     idle:
+        name: log idle name of the setup
         runs-on: ubuntu-latest
         steps:
             -
-                run: echo Idle Step
+                name: prereq
+                run: |
+                    echo Idle step
+                    apt update
+                    apt install sowsay
+            -
+                name: usage
+                run: |
+                    echo Finishig Step
