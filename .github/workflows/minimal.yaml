@@ -12,8 +12,18 @@ jobs:
                 run: |
                     echo Idle step
                     apt update
-                    apt install sowsay
+                    apt install figlet
             -
                 name: usage
                 run: |
-                    echo Finishig Step
+                    figlet hello
+            -
+                name: github-actions-checkout
+                run: |
+                    actions/checkout@5
+            -
+                name: step-4
+                run: |
+                    ls -la
+                    tree s
+                
