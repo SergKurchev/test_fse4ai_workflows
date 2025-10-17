@@ -11,8 +11,8 @@ jobs:
                 name: prereq
                 run: |
                     echo Idle step
-                    apt update
-                    apt install figlet
+                    sudo apt update
+                    sudo apt install figlet
             -
                 name: usage
                 run: |
